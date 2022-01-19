@@ -5,14 +5,64 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bowlby+One+SC&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS Custom -->
     <link rel="stylesheet" href="../dist/output.css">
-    <title>Document</title>
+    <title>Criminial</title>
 </head>
 
 <body>
-    <div>
-        <p class="text-3xl text-red-500">Texte rouge !</p>
-    </div>
+    <nav class="bg-gris dark:bg-bleu-900 p-4 flex justify-between items-center fixed w-full z-10">
+        <div class="logo">
+            <p class="font-bowlby text-bleu-500 dark:text-gris">Criminial</p>
+        </div>
+        <div class="liens flex">
+            <a href="#"
+                class="text-bleu-500 dark:text-gris border-bleu-500 dark:border-gris border-2 block px-4 py-1 rounded-lg hover:bg-jaune-500 hover:border-jaune-500 transition hover:text-gris dark:hover:text-bleu-900 mr-4">Narration</a>
+            <a href="#"
+                class="text-bleu-500 dark:text-gris border-bleu-500 dark:border-gris border-2 block px-4 py-1 rounded-lg hover:bg-jaune-500 hover:border-jaune-500 transition hover:text-gris dark:hover:text-bleu-900">Présentation</a>
+        </div>
+    </nav>
+    <main>
+        <div>
+            <video autoplay muted loop id="videoBg" class="fixed right-0 bottom-0 min-w-full min-h-full">
+                <source src="medias/placeholder.mp4" type="video/mp4">
+            </video>
+
+            <!-- Optional: some overlay text to describe the video -->
+            <div class="content fixed bottom-0 bg-jaune-500 bg-opacity-50 text-bleu-700 w-full p-4">
+                <h1 class="text-2xl font-bold">Découvrez la super enquête</h1>
+                <p>Regardez la vidéo oh</p>
+                <!-- Use a button to pause/play the video with JavaScript -->
+                <button id="videoBtn" onclick="startVideo()"
+                    class="bg-bleu-700 text-gris px-4 py-2 rounded-lg my-3 border-2 border-gris hover:bg-gris hover:text-bleu-700 transition">Pause</button>
+            </div>
+        </div>
+    </main>
 </body>
+<script>
+    let video = document.getElementById("videoBg");
+    let btn = document.getElementById("videoBtn");
+
+    function startVideo() {
+        if (video.paused) {
+            video.play()
+            btn.innerHTML = "Pause"
+        } else {
+            video.pause();
+            btn.innerHTML = "Lancer"
+        }
+    }
+
+</script>
 
 </html>
