@@ -470,23 +470,31 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .text-img {
   display: flex;
+  flex-direction: column;
 }
 
-@media (min-width: 640px) {
+@media (prefers-color-scheme: dark) {
   .text-img {
-    flex-direction: column;
+    --tw-text-opacity: 1;
+    color: rgb(239 240 240 / var(--tw-text-opacity));
+  }
+}
+
+@media (min-width: 1024px) {
+  .text-img {
+    flex-direction: row;
   }
 }
 
 .text-img > div {
-  width: 50%;
+  width: 100%;
   background-size: cover;
   background-repeat: no-repeat;
 }
 
-@media (min-width: 640px) {
+@media (min-width: 1024px) {
   .text-img > div {
-    width: 100%;
+    width: 50%;
   }
 }
 
@@ -496,7 +504,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .text-img > div:nth-child(1) {
   margin-right: 1rem;
-  height: 0.25rem;
 }
 
 .fixed {
@@ -517,6 +524,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .z-10 {
   z-index: 10;
+}
+
+.m-auto {
+  margin: auto;
 }
 
 .my-3 {
@@ -560,6 +571,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .min-w-full {
   min-width: 100%;
+}
+
+.max-w-screen-xl {
+  max-width: 1280px;
 }
 
 .items-center {

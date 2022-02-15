@@ -8,11 +8,11 @@
     }
 
     .text-img{
-        @apply flex sm:flex-col;
+        @apply flex flex-col lg:flex-row dark:text-gris;
     }
 
     .text-img > div{
-        @apply sm:w-full w-1/2 bg-no-repeat bg-cover;
+        @apply w-full lg:w-1/2 bg-no-repeat bg-cover;
     }
 
     .text-img > div:nth-child(2){
@@ -20,6 +20,6 @@
     }
 
     .text-img > div:nth-child(1){
-        @apply mr-4 h-1
+        @apply mr-4;
     }
 }
