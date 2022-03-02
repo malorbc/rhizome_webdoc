@@ -539,6 +539,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-right: 1rem;
 }
 
+.mt-8 {
+  margin-top: 2rem;
+}
+
 .block {
   display: block;
 }
@@ -575,6 +579,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .max-w-screen-xl {
   max-width: 1280px;
+}
+
+.flex-row-reverse {
+  flex-direction: row-reverse;
 }
 
 .items-center {
@@ -724,6 +732,21 @@ Ensure the default browser behavior of the `hidden` attribute.
   .dark\:text-gris {
     --tw-text-opacity: 1;
     color: rgb(239 240 240 / var(--tw-text-opacity));
+  }
+
+  .dark\:text-jaune-500 {
+    --tw-text-opacity: 1;
+    color: rgb(224 170 74 / var(--tw-text-opacity));
+  }
+
+  .dark\:text-bleu-500 {
+    --tw-text-opacity: 1;
+    color: rgb(84 115 182 / var(--tw-text-opacity));
+  }
+
+  .dark\:text-red-500 {
+    --tw-text-opacity: 1;
+    color: rgb(239 68 68 / var(--tw-text-opacity));
   }
 
   .dark\:hover\:text-bleu-900:hover {
