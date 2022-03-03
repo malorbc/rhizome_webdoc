@@ -734,21 +734,6 @@ Ensure the default browser behavior of the `hidden` attribute.
     color: rgb(239 240 240 / var(--tw-text-opacity));
   }
 
-  .dark\:text-jaune-500 {
-    --tw-text-opacity: 1;
-    color: rgb(224 170 74 / var(--tw-text-opacity));
-  }
-
-  .dark\:text-bleu-500 {
-    --tw-text-opacity: 1;
-    color: rgb(84 115 182 / var(--tw-text-opacity));
-  }
-
-  .dark\:text-red-500 {
-    --tw-text-opacity: 1;
-    color: rgb(239 68 68 / var(--tw-text-opacity));
-  }
-
   .dark\:hover\:text-bleu-900:hover {
     --tw-text-opacity: 1;
     color: rgb(15 22 36 / var(--tw-text-opacity));
