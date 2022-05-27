@@ -93,3 +93,11 @@ h4 {
 [x-cloak] {
   display: none !important;
 }
+
+h2 {
+  @apply text-2xl font-bold text-bleu-500 mt-4;
+}
+
+h3 {
+  @apply text-xl font-bold text-jaune-500 border-l-8 border-jaune-500 pl-4 mt-4;
+}

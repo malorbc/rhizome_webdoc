@@ -27,7 +27,7 @@
     <!-- CSS Custom -->
     <link rel="stylesheet" href="../dist/output.css">
 
-    <title>Guide de styles</title>
+    <title>Les coulisses du projet</title>
 </head>
 
 <body>
@@ -36,12 +36,12 @@
 
         <!-- Menu burger -->
         <div x-cloak @click="navOpen = !navOpen"
-            class="burger fixed z-10 sm:z-0 top-4 bg-white p-4 right-4 cursor-pointer rounded-lg shadow-lg transition-all">
-            <svg x-show="!navOpen" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-bleu-500 transition-all"
+            class="burger fixed z-10 sm:z-0 top-4 bg-bleu-500  border-4 border-b-8 border-bleu-400 p-4 right-4 cursor-pointer rounded-lg shadow-lg transition-all">
+            <svg x-show="!navOpen" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white transition-all"
                 fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
             </svg>
-            <svg x-show="navOpen" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-bleu-500 transition-all"
+            <svg x-show="navOpen" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white transition-all"
                 viewBox="0 0 20 20" fill="currentColor">
                 <path fill-rule="evenodd"
                     d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
@@ -252,10 +252,216 @@
                 <h1 class="text-3xl font-bold text-gray-100 text-center">Les coulisses du projet</h1>
             </div>
             <div class="max-w-4xl m-auto py-10 contenu p-6">
-                <p>Vous voulez en savoir plus sur Criminial et le projet Rhizome ? ...</p>
-                <p class="mt-6"><span class="italic">Le groupe des 5D.</span></p>
 
+                <!-- Intro -->
+                <div class="intro">
+                    <p>Vous voulez en savoir plus sur Criminial et le projet Rhizome ? Cette page explique tout le
+                        projet et sa démarche, de sa conception jusqu’à sa réalisation. Découvrez comment nous avons
+                        créé le projet, quels étaient nos objectifs et buts. Bonne lecture !</p>
+                    <p class="mt-6"><span class="italic">Le groupe des 5D.</span></p>
+                </div>
 
+                <!-- Contexte -->
+                <div class="contexte">
+                    <h2>Contexte</h2>
+                    <h3>Rhizome, c'est quoi ?</h3>
+                    <p>CRIMINIAL a été réalisé dans le cadre du projet Rhizome, un travail universitaire propre au
+                        Master PSM de Montbéliard. À l’origine, les projets Rhizomes étaient des vidéos 3D, mais le
+                        cadre a évolué au fil des années afin qu’ils s'entremêlent aux différentes plateformes,
+                        numériques ou non. Ainsi, un projet Rhizome peut être une application, un site web, un réseau
+                        social ou encore les trois à la fois. Il n’y a pas de réelle limite ou contrainte imposée, mis à
+                        part le thème général ainsi que les plateformes à utiliser. Cette liberté permet d’exposer au
+                        mieux sa créativité et nécessite de réfléchir longuement sur les possibilités en matière de
+                        conception et de réalisation.</p>
+                    <h3>La thématique de l'année</h3>
+                    <div class="flex flex-row items-center">
+                        <img src="./medias/logo-5D-transparent.png" class="w-32 h-32">
+                        <p>
+                            Les projets Rhizomes de l’année 2021-2022 avaient comme sujet “L’intelligence et la
+                            stupidité artificielle”. Cette problématique est intéressante car elle oppose intelligence
+                            et stupidité, et de manière plus indirecte l’homme et la machine.
+                        </p>
+                    </div>
+                    <h3>Notre groupe</h3>
+                    <div class="flex flex-row my-8">
+
+                        <div class="w-1/4 rounded-lg border-4 border-b-8 overflow-hidden m-4">
+                            <img class="w-auto" src="./medias/logo-5D-noir.png" alt="Mountain">
+                            <div class="px-6 py-4">
+                                <div class="font-bold text-xl mb-2">Malo Robic</div>
+                                <p class="text-gray-700 text-base">
+                                    Chef de projet & développeur
+                                </p>
+                            </div>
+                            <div class="px-6 pb-2">
+                                <span
+                                    class="inline-block bg-bleu-500 border-4 border-b-8 border-bleu-400 rounded-lg px-3 py-1 text-sm font-semibold text-gray-100 mr-2 mb-2">html</span>
+
+                            </div>
+                        </div>
+                        <div class="w-1/4 rounded-lg border-4 border-b-8 overflow-hidden m-4">
+                            <img class="w-auto" src="./medias/logo-5D-noir.png" alt="Mountain">
+                            <div class="px-6 py-4">
+                                <div class="font-bold text-xl mb-2">Malo Robic</div>
+                                <p class="text-gray-700 text-base">
+                                    Chef de projet & développeur
+                                </p>
+                            </div>
+                            <div class="px-6 pb-2">
+                                <span
+                                    class="inline-block bg-bleu-500 border-4 border-b-8 border-bleu-400 rounded-lg px-3 py-1 text-sm font-semibold text-gray-100 mr-2 mb-2">html</span>
+
+                            </div>
+                        </div>
+                        <div class="w-1/4 rounded-lg border-4 border-b-8 overflow-hidden m-4">
+                            <img class="w-auto" src="./medias/logo-5D-noir.png" alt="Mountain">
+                            <div class="px-6 py-4">
+                                <div class="font-bold text-xl mb-2">Malo Robic</div>
+                                <p class="text-gray-700 text-base">
+                                    Chef de projet & développeur
+                                </p>
+                            </div>
+                            <div class="px-6 pb-2">
+                                <span
+                                    class="inline-block bg-bleu-500 border-4 border-b-8 border-bleu-400 rounded-lg px-3 py-1 text-sm font-semibold text-gray-100 mr-2 mb-2">html</span>
+
+                            </div>
+                        </div>
+                        <div class="w-1/4 rounded-lg border-4 border-b-8 overflow-hidden m-4">
+                            <img class="w-auto" src="./medias/logo-5D-noir.png" alt="Mountain">
+                            <div class="px-6 py-4">
+                                <div class="font-bold text-xl mb-2">Malo Robic</div>
+                                <p class="text-gray-700 text-base">
+                                    Chef de projet & développeur
+                                </p>
+                            </div>
+                            <div class="px-6 pb-2">
+                                <span
+                                    class="inline-block bg-bleu-500 border-4 border-b-8 border-bleu-400 rounded-lg px-3 py-1 text-sm font-semibold text-gray-100 mr-2 mb-2">html</span>
+
+                            </div>
+                        </div>
+                    </div>
+                    <p>Ayant tous un profil différent et des appétences pour différents domaines du multimédia, notre
+                        groupe était pluridisciplinaire et équilibré, ce qui s’est révélé être une force pour la suite
+                        du projet. Afin de consolider l’identité de notre groupe, nous avons commencé par trouver un
+                        nom, celui des 5D. Nous avons aussi réalisé un logo pour le groupe, que voici ci-contre. Le nom
+                    </p>
+                </div>
+
+                <!-- Conception -->
+                <div class="conception">
+                    <h2>Conception</h2>
+                    <h3>Recherches initiales</h3>
+                    <p>Dans un premier temps, nous avons réalisé un Brainstorming et mis en commun toutes nos idées,
+                        avant d’effectuer une présélection afin de ne conserver que les plus pertinentes. Nous avons
+                        développé toutes les autres puis avons réalisé d’autres sélections jusqu’à qu’il ne reste plus
+                        qu’un concept : le plus intéressant, enrichissant et attrayant.</p>
+                    <div class="flex flex-row items-center my-4">
+                        <img src="./medias/logo-5D-transparent.png" class="w-1/3">
+                        <p>
+                            Afin de bien visualiser le concept choisi, nous avons réalisé un nuage de mots contenant
+                            l’ensemble des termes clés liés au projet ainsi que les aspects qui seront sollicités dans
+                            les phases de conception et de réalisation.
+                        </p>
+                    </div>
+                    <p>Les sources d’inspiration ont été nombreuses pour nous permettre de cerner précisément notre
+                        concept. Elles concernent en majorité des jeux vidéo et de société tels que “Cluedo”,
+                        “Qui-est-ce ?” ou “Akinator”. Nous avons retenu les aspects qui nous semblaient les plus
+                        pertinents dans le but de pouvoir les réutiliser et les adapter pour un seul et même projet.
+
+                        Par la suite, nous avons commencé à poser les bases de l’identité du projet en se penchant sur
+                        un nom et un slogan.
+                    </p>
+                    <h3>Charte graphique</h3>
+                    <p>Une des particularités du projet Rhizome concerne l’élaboration de différents livrables,
+                        permettant d’aboutir à un projet riche, complet et ciblant des publics variés. Les quatre
+                        livrables incorporés sont l’application mobile, le webdoc, le trailer vidéo ainsi que l’affiche.
+
+                        Avant de se lancer directement dans le travail de réalisation, il était primordial de déterminer
+                        l’identité graphique et visuelle de notre projet. En effet, la charte graphique à définir se
+                        devait d’être respectée sur l’ensemble des supports cités précédemment.
+                        Une nouvelle fois, nous avons effectué un travail de recherche approfondi et puisé notre
+                        inspiration sur diverses ressources, numériques mais pas seulement. Il a ainsi été plus facile
+                        de composer notre identité visuelle : harmonie colorée, typographies, styles graphiques… Ces
+                        éléments nous ont permis d’élaborer un logo pertinent et efficace qui concorde parfaitement avec
+                        cette identité graphique.
+                    </p>
+                    <div class="flex flex-row items-center my-4">
+                        <img src="./medias/logo-5D-transparent.png" class="w-1/2">
+                        <img src="./medias/logo-5D-transparent.png" class="w-1/2">
+                    </div>
+                    <h3>Choix des technologies</h3>
+                    <p>
+                        Une fois la charte graphique et la structure du projet posée, nous nous sommes interrogés sur
+                        les moyens techniques adaptés pour réaliser les différents livrables. Pour l’affiche, le choix
+                        était assez évident ; la suite Adobe s’est imposée d'elle-même. C’est aussi la suite Adobe et le
+                        logiciel 3DSMax qui ont été utilisés pour réaliser le trailer.
+                    </p>
+                    <p>
+                        Pour l’application, livrable principal et essentiel du projet, nous avions initialement prévu
+                        d’utiliser Ionic, une technologie hybride. En plus de cela, nous pensions créer un serveur avec
+                        NodeJS pour gérer le traitement des données et de l’algorithme de jeu. Nous avons changé d’avis
+                        par la suite, car ces outils n’étaient pas vraiment adaptés à notre besoin : nous avons
+                        finalement utilisé uniquement React Native et un back-end géré facilement avec Firebase.
+                    </p>
+                    <p>Concernant le webdoc, nous avons utilisé des technologies web simples et efficaces, comme
+                        Tailwind CSS et SkrollR pour gérer les animations au défilement de la souris.</p>
+                    <h3>
+                        Maquettage des livrables
+                    </h3>
+                    <p>Afin d’aborder correctement le travail de réalisation de l’application et du webdoc, nous avons
+                        conçu des maquettes graphiques par le biais de l’outil collaboratif Figma. L’ensemble des
+                        interfaces a été dessinée de manière à avoir une vision claire et globale de l’application et du
+                        webdoc. En amont, nous avons recherché diverses ressources afin de trouver de l’inspiration en
+                        termes d’apparence graphique et visuelle notamment.
+                        L’élaboration du webdoc impliquait également de définir une narration au préalable, narration
+                        que nous avons rédigé et illustré afin de mieux la cerner. De nombreux visuels et illustrations
+                        ont ensuite été réalisées afin d’être incorporées à la narration finale du webdoc.
+                    </p>
+                    <div class="flex flex-row items-center my-4">
+                        <img src="./medias/logo-5D-transparent.png" class="w-1/2">
+                        <img src="./medias/logo-5D-transparent.png" class="w-1/2">
+                    </div>
+                    <p>En parallèle, nous avons également conçu des ébauches pour l’affiche et le trailer vidéo afin de
+                        mieux aborder la phase de réalisation. Concernant l’affiche, nous avons dessiné une version
+                        simplifiée contenant l’ensemble des éléments textuels et graphiques à intégrer, et indiquant
+                        leur mise en page sur le support. Pour le trailer vidéo, nous avons au préalable rédigé le
+                        scénario puis élaboré un storyboard illustrant précisément tout l’ensemble.</p>
+                    <div class="flex flex-row items-center my-4">
+                        <img src="./medias/logo-5D-transparent.png" class="w-1/2">
+                    </div>
+                </div>
+
+                <div class="realisation">
+                    <h2>Réalisation</h2>
+                    <h3>L'application</h3>
+                    <h3>Le trailer vidéo</h3>
+                    <p>Grâce à notre démarche de travail, nous avons abordé plus sereinement et plus efficacement la
+                        phase de réalisation des différents livrables. La version finale de l’affiche a été créée par le
+                        biais d’Illustrator, en reprenant les éléments définis lors de la phase de conception. Pour
+                        réaliser le trailer vidéo, plusieurs travaux étaient à réaliser en amont : une scène 3D
+                        dynamique sur 3DS Max, des personnages et autres éléments 2D au format vectoriel afin de pouvoir
+                        les animer via le logiciel de montage. Tous les éléments créés précédemment ont été incorporés
+                        et assemblés en suivant le modèle du storyboard. After Effect est le logiciel qui a été utilisé
+                        pour la réalisation du trailer vidéo.</p>
+                    <div class="flex flex-row items-center my-4">
+                        <img src="./medias/logo-5D-transparent.png" class="w-1/2">
+                        <img src="./medias/logo-5D-transparent.png" class="w-1/2">
+                    </div>
+                    <h3>Marketing & réseaux sociaux</h3>
+                    <h3>L'affiche</h3>
+                    <h3>Tests utilisateurs</h3>
+                    <h3>Guide de styles</h3>
+                    <h3>Webdoc & accessibilité</h3>
+                </div>
+
+                <div class="bilan">
+                    <h2>Bilan du projet</h2>
+                    <h3>Personnel</h3>
+                    <h3>Professionnel</h3>
+                    <h3>Technique</h3>
+                </div>
             </div>
             <!-- <footer class="flex flex-col">
                 <div class="flex flex-col md:flex-row bg-bleu-500 py-6 px-12">

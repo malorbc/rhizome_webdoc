@@ -1,27 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr" class="skrollr skrollr-desktop">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- ScrollMagic -->
-    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
-
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Bowlby+One+SC&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
-
-    <!-- CSS Custom -->
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta chraset="utf-8">
+    <title>Test skrollr</title>
     <link rel="stylesheet" href="../dist/output.css">
-    <title>Criminial</title>
     <style type="text/css" media="screen">
         /* STYLES SKROLLR */
         .skrollable {
@@ -172,33 +156,21 @@
     </style>
 </head>
 
-<body class="bg-gris dark:bg-bleu-900">
-    <nav class="bg-gris dark:bg-bleu-900 p-4 flex justify-between items-center fixed w-full" style="z-index:200;">
+<!-- cz-shortcut-listen = jsp ce que c'est, peut etre pour le mobile... -->
+
+<body cz-shortcut-listen="true">
+    <nav class="bg-gris dark:bg-bleu-900 p-4 flex justify-between items-center fixed w-full" style="z-index: 300;">
         <div class="logo">
-            <p class="font-bowlby text-bleu-500 dark:text-gris"><a href="index.html">Criminial</a></p>
+            <p class="font-bowlby text-bleu-500 dark:text-gris">Criminial</p>
         </div>
         <div class="liens flex">
-            <a href="narration.html" <a href="#"
-                class="text-bleu-500 dark:text-gris border-bleu-500 dark:border-gris border-2 block px-4 py-1 rounded-lg hover:bg-jaune-500 hover:border-jaune-500 transition hover:text-gris dark:hover:text-bleu-900">Les
-                coulisses</a>
+            <a href="#"
+                class="text-bleu-500 dark:text-gris border-bleu-500 dark:border-gris border-2 block px-4 py-1 rounded-lg hover:bg-jaune-500 hover:border-jaune-500 transition hover:text-gris dark:hover:text-bleu-900 mr-4">Narration</a>
+            <a href="#"
+                class="text-bleu-500 dark:text-gris border-bleu-500 dark:border-gris border-2 block px-4 py-1 rounded-lg hover:bg-jaune-500 hover:border-jaune-500 transition hover:text-gris dark:hover:text-bleu-900">Présentation</a>
         </div>
     </nav>
-    <!-- <main>
-        <div class="min-w-full h-auto max-h-screen relative overflow-y-clip">
-            <video muted loop id="videoBg" class="max-h-fit">
-                <source src="medias/placeholder.mp4" type="video/mp4">
-            </video>
-            <div class="w-full absolute bottom-0 bg-yellow-500 bg-opacity-40 p-4 text-gris">
-                <h1 class="text-2xl font-bold">Découvrez la super enquête</h1>
-                <p>Regardez la vidéo oh</p>
-                <button id="videoBtn" onclick="startVideo()"
-                    class="bg-bleu-700 text-gris px-4 py-2 rounded-lg my-3 border-2 border-gris hover:bg-gris hover:text-bleu-700 transition">Lancer</button>
-            </div>
-        </div>
-        <div class="p-4" id="testScroll">
-            <h1 class="text-center dark:text-gris font-bold text-2xl">Titre de fou</h1>
-        </div>
-    </main> -->
+
     <!-- PLAN 1 -->
     <div class="scene" data-0="display:block;" data-2000="transform:scale(1) translate(0px,0px);"
         data-3600="transform:scale(4) translate(88px,82px);" data-4000="display:none;">
@@ -383,27 +355,27 @@
 
     <!-- PLAN 8 -->
     <!--
- <div class="scene telechargement" data-0="display:none;" data-42400="display:block; top:100%;" data-43600="top:0%;">
-     <div>
-         <h2>Jouez dès maintenant à Criminial</h2>
-         <p>Affrontez Sherbot et trouver le coupable avec le moins de questions possible.</p>
-         <div class="android">
-             <img class="logoSystemeExploitation" src="ressources/logos/android.png">
-             <div>
-                 <button><img src="ressources/icones/telechargement.svg">Télécharger pour Android</button>
-                 <p>L’application n’est pas disponible sur le Playstore, vous receverez donc probablement une alerte de sécurité lors du téléchargement du fichier.</p>
-             </div>
-         </div>
-         <div class="ios">
-             <img class="logoSystemeExploitation" src="ressources/logos/ios.png">
-             <div>
-                 <button><img src="ressources/icones/telechargement.svg">Télécharger pour iOS</button>
-                 <p>L’application n’est pas téléchargeable pour iOS pour le moment. Elle sera bientôt disponible.</p>
-             </div>
-         </div>
-     </div>
- </div>
- -->
+    <div class="scene telechargement" data-0="display:none;" data-42400="display:block; top:100%;" data-43600="top:0%;">
+        <div>
+            <h2>Jouez dès maintenant à Criminial</h2>
+            <p>Affrontez Sherbot et trouver le coupable avec le moins de questions possible.</p>
+            <div class="android">
+                <img class="logoSystemeExploitation" src="ressources/logos/android.png">
+                <div>
+                    <button><img src="ressources/icones/telechargement.svg">Télécharger pour Android</button>
+                    <p>L’application n’est pas disponible sur le Playstore, vous receverez donc probablement une alerte de sécurité lors du téléchargement du fichier.</p>
+                </div>
+            </div>
+            <div class="ios">
+                <img class="logoSystemeExploitation" src="ressources/logos/ios.png">
+                <div>
+                    <button><img src="ressources/icones/telechargement.svg">Télécharger pour iOS</button>
+                    <p>L’application n’est pas téléchargeable pour iOS pour le moment. Elle sera bientôt disponible.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    -->
 
 
 
@@ -510,21 +482,5 @@
         var s = skrollr.init();
     </script>
 </body>
-<script>
-    let video = document.getElementById("videoBg");
-    let btn = document.getElementById("videoBtn");
-
-    function startVideo() {
-        if (video.paused) {
-            video.play()
-            btn.innerHTML = "Pause"
-        } else {
-            video.pause();
-            btn.innerHTML = "Lancer"
-        }
-    }
-
-</script>
-<script src="narration.js"></script>
 
 </html>
