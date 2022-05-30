@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- ScrollMagic -->
-    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
+
+    <!-- Alpine -->
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -43,7 +43,7 @@
 
 
         /* STYLES GENERAUX */
-        button {
+        .scene button {
             display: flex;
             align-items: center;
             /*FONT FAMILY: Semi bold*/
@@ -169,36 +169,66 @@
             border-color: #191919;
             box-shadow: 0px 5px #191919;
         }
+
+        .menu-button {
+            box-shadow: 0px 5px #203DF1;
+        }
+
+        .menu-button:hover {
+            box-shadow: 0px 1px #203DF1;
+        }
+
+        input:checked~.dot {
+            transform: translateX(100%);
+            background-color: #203DF1;
+            border: none;
+        }
+
+        .toggle {
+            box-shadow: 0px 5px #203DF1;
+        }
+
+        .toggle-container:hover .toggle {
+            box-shadow: 0px 1px #203DF1;
+            transform: translateY(0.25rem);
+        }
+
+        .toggle-container:hover .dot {
+            transform: translateY(0.25rem);
+        }
     </style>
 </head>
 
-<body class="bg-gris dark:bg-bleu-900">
-    <nav class="bg-gris dark:bg-bleu-900 p-4 flex justify-between items-center fixed w-full" style="z-index:200;">
+<body class="bg-gris dark:bg-bleu-500" x-data="{showBar : true}">
+    <nav class=" p-4 py-6 flex bg-bleu-500 justify-between items-center fixed w-full transition-all duration-500"
+        style="z-index:200;" :class="{ 'bg-transparent dark:bg-transparent transition-all duration-500' : showBar}"
+        @scroll.window="showBar = (window.pageYOffset > 800) ? true : false">
         <div class="logo">
             <p class="font-bowlby text-bleu-500 dark:text-gris"><a href="index.html">Criminial</a></p>
         </div>
         <div class="liens flex">
-            <a href="narration.html" <a href="#"
-                class="text-bleu-500 dark:text-gris border-bleu-500 dark:border-gris border-2 block px-4 py-1 rounded-lg hover:bg-jaune-500 hover:border-jaune-500 transition hover:text-gris dark:hover:text-bleu-900">Les
-                coulisses</a>
+
+            <button id="scroll" x-data="{play: false}" @click="play = !play; pageScroll(play)" class="bg-bleu-500 border-bleu-600 menu-button text-white rounded-lg flex px-4 py-1 border-4
+                hover:translate-y-1 transition-all mr-4">
+                <svg x-show="play" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="h-6 w-6 fill-white">
+                    <path
+                        d="M181,406c-22.09,0-40-17.91-40-40V146c0-22.09,17.91-40,40-40s40,17.91,40,40v220c0,22.09-17.91,40-40,40Z" />
+                    <path
+                        d="M331,406c-22.09,0-40-17.91-40-40V146c0-22.09,17.91-40,40-40s40,17.91,40,40v220c0,22.09-17.91,40-40,40Z" />
+                </svg>
+                <svg x-show="!play" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="h-6 w-6 fill-white">
+                    <path
+                        d="M106,471c-6.88,0-13.75-1.77-19.92-5.31-12.42-7.13-20.08-20.36-20.08-34.69V81c0-14.32,7.66-27.55,20.08-34.69,12.42-7.13,27.71-7.08,40.08,.13L426.16,221.45c12.29,7.17,19.84,20.32,19.84,34.55s-7.56,27.38-19.84,34.55L126.16,465.55c-6.23,3.63-13.19,5.45-20.16,5.45Zm40-320.36v210.72l180.61-105.36-180.61-105.36Z" />
+                </svg>
+            </button>
+
+            <a href="coulisses.html">
+                <button
+                    class="bg-bleu-500 border-bleu-600 menu-button text-white rounded-lg flex px-4 py-1 border-4 hover:translate-y-1 transition-all">Les
+                    coulisses</button>
+            </a>
         </div>
     </nav>
-    <!-- <main>
-        <div class="min-w-full h-auto max-h-screen relative overflow-y-clip">
-            <video muted loop id="videoBg" class="max-h-fit">
-                <source src="medias/placeholder.mp4" type="video/mp4">
-            </video>
-            <div class="w-full absolute bottom-0 bg-yellow-500 bg-opacity-40 p-4 text-gris">
-                <h1 class="text-2xl font-bold">Découvrez la super enquête</h1>
-                <p>Regardez la vidéo oh</p>
-                <button id="videoBtn" onclick="startVideo()"
-                    class="bg-bleu-700 text-gris px-4 py-2 rounded-lg my-3 border-2 border-gris hover:bg-gris hover:text-bleu-700 transition">Lancer</button>
-            </div>
-        </div>
-        <div class="p-4" id="testScroll">
-            <h1 class="text-center dark:text-gris font-bold text-2xl">Titre de fou</h1>
-        </div>
-    </main> -->
     <!-- PLAN 1 -->
     <div class="scene" data-0="display:block;" data-2000="transform:scale(1) translate(0px,0px);"
         data-3600="transform:scale(4) translate(88px,82px);" data-4000="display:none;">
@@ -405,8 +435,6 @@
  </div>
  -->
 
-
-
     <!-- PLAN 5 - Discussion -->
     <div class="scene discussion">
         <div data-25900="top:-50%;" data-26400="top:0%;" data-27400="opacity:1;" data-27500="opacity:0;">
@@ -495,11 +523,6 @@
         </div>
     </div>
 
-
-
-
-
-
     <!-- lien vers skrollr -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js"
         integrity="sha512-A2+khatRDWHUE2VUtN4xUTkr1nc4YfDBw9Sg3ea6x0aRPfpcYieDZji4D2edDHy/yF5NsYzP7kL8sSM8s5EqCw=="
@@ -507,24 +530,25 @@
 
     <!-- init de scrollr -->
     <script type="text/javascript">
-        var s = skrollr.init();
+        var s = skrollr.init({
+            smoothScrolling: true,
+            smoothScrollingDuration: 250
+        });
     </script>
 </body>
 <script>
-    let video = document.getElementById("videoBg");
-    let btn = document.getElementById("videoBtn");
-
-    function startVideo() {
-        if (video.paused) {
-            video.play()
-            btn.innerHTML = "Pause"
+    function pageScroll(play) {
+        function doScroll() {
+            window.scrollBy(0, 500);
+            scrolldelay = setTimeout(doScroll, 1);
+        }
+        if (play) {
+            doScroll();
         } else {
-            video.pause();
-            btn.innerHTML = "Lancer"
+            clearTimeout(scrolldelay);
         }
     }
 
 </script>
-<script src="narration.js"></script>
 
 </html>
