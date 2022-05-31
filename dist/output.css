@@ -511,6 +511,16 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-bottom: 3rem;
 }
 
+.mx-2 {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+.mx-4 {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
 .mt-12 {
   margin-top: 3rem;
 }
@@ -643,18 +653,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   max-width: 56rem;
 }
 
-.max-w-xl {
-  max-width: 36rem;
-}
-
-.max-w-2xl {
-  max-width: 42rem;
-}
-
-.max-w-3xl {
-  max-width: 48rem;
-}
-
 .transform {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
@@ -697,10 +695,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .overflow-x-hidden {
   overflow-x: hidden;
-}
-
-.overflow-y-hidden {
-  overflow-y: hidden;
 }
 
 .rounded-lg {
@@ -774,9 +768,9 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-color: rgb(255 1 3 / var(--tw-bg-opacity));
 }
 
-.bg-bleu-800 {
+.bg-bleu-600 {
   --tw-bg-opacity: 1;
-  background-color: rgb(10 29 151 / var(--tw-bg-opacity));
+  background-color: rgb(32 61 241 / var(--tw-bg-opacity));
 }
 
 .bg-gris {
@@ -788,24 +782,9 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-color: transparent;
 }
 
-.bg-bleu-600 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(32 61 241 / var(--tw-bg-opacity));
-}
-
-.bg-bleu-100 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(238 240 254 / var(--tw-bg-opacity));
-}
-
 .bg-bleu-400 {
   --tw-bg-opacity: 1;
   background-color: rgb(123 140 246 / var(--tw-bg-opacity));
-}
-
-.bg-red-400 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(248 113 113 / var(--tw-bg-opacity));
 }
 
 .bg-gray-100 {
@@ -929,11 +908,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   line-height: 2.25rem;
 }
 
-.text-4xl {
-  font-size: 2.25rem;
-  line-height: 2.5rem;
-}
-
 .font-bold {
   font-weight: 700;
 }
@@ -963,21 +937,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .text-gray-700 {
   --tw-text-opacity: 1;
   color: rgb(55 65 81 / var(--tw-text-opacity));
-}
-
-.text-red-400 {
-  --tw-text-opacity: 1;
-  color: rgb(248 113 113 / var(--tw-text-opacity));
-}
-
-.text-gray-900 {
-  --tw-text-opacity: 1;
-  color: rgb(17 24 39 / var(--tw-text-opacity));
-}
-
-.text-gray-800 {
-  --tw-text-opacity: 1;
-  color: rgb(31 41 55 / var(--tw-text-opacity));
 }
 
 .text-gray-600 {
@@ -1362,14 +1321,6 @@ h3 {
 
   .md\:w-1\/4 {
     width: 25%;
-  }
-
-  .md\:max-w-md {
-    max-width: 28rem;
-  }
-
-  .md\:max-w-sm {
-    max-width: 24rem;
   }
 
   .md\:max-w-xs {
