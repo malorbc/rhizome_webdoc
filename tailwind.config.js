@@ -28,6 +28,24 @@ module.exports = {
           900: "#432B0B",
         },
         gris: "#eff0f0",
+        reseaux: {
+          discord: {
+            bg: "#5865F2",
+            border: "#414ED1",
+          },
+          instagram: {
+            bg: "#EB2351",
+            border: "#AC183A",
+          },
+          tiktok: {
+            bg: "#000000",
+            border: "#414141",
+          },
+          youtube: {
+            bg: "#FF0103",
+            border: "#C30000",
+          },
+        },
       },
     },
     fontFamily: {

@@ -91,3 +91,14 @@ h3 {
 .contenu p a {
   @apply text-jaune-700 underline underline-offset-4;
 }
+.real-footer {
+  @apply my-2;
+}
+
+.real-footer svg {
+  @apply mr-2;
+}
+
+.real-footer:hover svg {
+  @apply scale-125;
+}
